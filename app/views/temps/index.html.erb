@@ -7,8 +7,9 @@
   <%= label_tag :Country %>
   <%= text_field_tag :Country %>
   <%= submit_tag "Submit" %>
+  <h3>The current temperature is: <%= @temp_data %> degrees farenheight.</h3>
+  <h3>With: <%= @temp["weather"][0]["description"] %></h3>
+  <h3>Here in: <%= @location %></h3>
 <% end %>
-<h3>The current temperature is: <%= @temp_data %> degrees farenheight. </h3>
-<h3>With: <%= @temp["weather"][0]["description"] %></h3>
-<h3>Here in: <%= @location %></h3>
+
 
