@@ -1,0 +1,13 @@
+<h2>Your Weather Now</h2>
+<%= image_tag("weathericon.png") %>
+<h4>For your current weather, please enter your city and country.</h4>
+  <%= form_tag '/', method: :get do %>
+  <%= label_tag :City %>
+  <%= text_field_tag :City %>
+  <%= label_tag :Country %>
+  <%= text_field_tag :Country %>
+  <%= submit_tag "Submit" %>
+<% end %>
+<h3>The current temperature is: <%= @temp_data %> degrees farenheight. </h3>
+<h3>With: <%= @temp["weather"][0]["description"] %></h3>
+<h3>Here in: <%= @location %></h3>
